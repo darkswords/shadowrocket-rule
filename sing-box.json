@@ -93,67 +93,50 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "direct"
+        "direct",
+        "node_rn",
+        "node_us"
       ]
     },
     {
       "tag": "OpenAI",
       "type": "selector",
       "outbounds": [
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ],
-      "default": "America"
+      "default": "node_us"
     },
     {
       "tag": "Google",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
       "tag": "Telegram",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
       "tag": "Twitter",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
       "tag": "Facebook",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
@@ -161,15 +144,16 @@
       "type": "selector",
       "outbounds": [
         "direct",
-        "HongKong",
-        "TaiWan"
+        "node_rn",
+        "node_us"
       ]
     },
     {
       "tag": "Bahamut",
       "type": "selector",
       "outbounds": [
-        "TaiWan",
+        "node_rn",
+        "node_us",
         "Proxy"
       ]
     },
@@ -177,49 +161,34 @@
       "tag": "Spotify",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ],
-      "default": "America"
+      "default": "node_us"
     },
     {
       "tag": "TikTok",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America"
+        "node_rn",
+        "node_us"
       ],
-      "default": "Japan"
+      "default": "node_us"
     },
     {
       "tag": "Netflix",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
       "tag": "Disney+",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
@@ -227,12 +196,8 @@
       "type": "selector",
       "outbounds": [
         "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
@@ -240,12 +205,8 @@
       "type": "selector",
       "outbounds": [
         "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
@@ -253,36 +214,24 @@
       "type": "selector",
       "outbounds": [
         "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
       "tag": "Streaming",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "node_rn",
+        "node_us"
       ]
     },
     {
       "tag": "Global",
       "type": "selector",
       "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others",
+        "node_rn",
+        "node_us",
         "direct"
       ]
     },
@@ -295,52 +244,11 @@
       ]
     },
     {
-      "tag": "HongKong",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "TaiWan",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "Singapore",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "Japan",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "America",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "Others",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
-    },
-    {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "Proxy"
+        "node_rn",
+        "node_us"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -349,7 +257,7 @@
     {
       "type": "direct",
       "tag": "direct"
-    }
+    },
   ],
   "route": {
     "auto_detect_interface": true,
