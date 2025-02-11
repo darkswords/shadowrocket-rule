@@ -16,6 +16,7 @@ let proxies = await produceArtifact({
 config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
+  // 根据不同的 tag 类型，将代理标签添加到 outbounds
   if (['all', 'all-auto'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies))
   }
@@ -37,6 +38,7 @@ config.outbounds.map(i => {
 })
 
 config.outbounds.forEach(outbound => {
+  // 如果 outbounds 是数组且为空，则插入 COMPATIBLE 代理
   if (Array.isArray(outbound.outbounds) && outbound.outbounds.length === 0) {
     if (!compatible) {
       config.outbounds.push(compatible_outbound)
@@ -46,8 +48,10 @@ config.outbounds.forEach(outbound => {
   }
 });
 
+// 输出修改后的配置
 $content = JSON.stringify(config, null, 2)
 
 function getTags(proxies, regex) {
+  // 根据正则表达式筛选符合条件的代理并返回其标签
   return (regex ? proxies.filter(p => regex.test(p.tag)) : proxies).map(p => p.tag)
 }
